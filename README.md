@@ -5,7 +5,7 @@ AI/ML × Robotics • SLAM & GenAI systems • Building real, shippable things
 </p>
 
 <p align="center">
-  <a href="ouazmourad.github.io/mourad-ouazghire.github.io/">Website</a> ·
+  <a href="https://ouazmourad.github.io/mourad-ouazghire.github.io/">Website</a> ·
   <a href="https://scholar.google.com/citations?user=t1NZj80AAAAJ&hl=en&oi=ao">Google Scholar</a>
 </p>
 
@@ -19,7 +19,7 @@ AI/ML × Robotics • SLAM & GenAI systems • Building real, shippable things
 - **iRobMan_Franka** — control & sim work for Franka stack  
 - **MarketOps_DBorse** — data workflows + modeling for market ops  
 - **realestate_LLM** — applied LLM pipeline for domain-specific tasks  
-- Personal site: **mourad-ouazghire.github.io**
+- Personal site: **[mourad-ouazghire.github.io](https://ouazmourad.github.io/mourad-ouazghire.github.io/)**
 
 ### 🧰 Stack
 `Python` · `C++` · `PyTorch` · `Transformers` · `ROS` · `PyBullet / MuJoCo` · `OpenCV` · `Pandas`
