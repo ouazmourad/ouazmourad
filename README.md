@@ -34,7 +34,7 @@
     <img src="https://cultofthepartyparrot.com/parrots/hd/hypnoparrotdark.gif" width="25" height="25"/>
     <img src="https://cultofthepartyparrot.com/parrots/hd/mustacheparrot.gif" width="25" height="25"/>
 </div>
-<p align="center"><sub>⚠️ the parrots are load-bearing — do not remove ⚠️</sub></p>
+<p align="center"><sub>sub-average github profile</sub></p>
 
 <p align="center">
   <a href="https://ouazmourad.github.io/mourad-ouazghire.github.io/">🌐 Website</a> ·
@@ -53,7 +53,7 @@
 
 ### 🧭 My odometry so far
 
-> Robots need loop closure. Apparently, so do I.
+> computer, show em where we've been.
 
 ```mermaid
 graph LR
@@ -111,7 +111,6 @@ graph LR
 - 🗣️ **Languages:** English, French & Arabic (fluent) · German (C1) · Python (native) · C++ (it's complicated)
 - 🏆 **2× DAAD RISE Worldwide Scholar** (2023 & 2024) — Germany kept sending me abroad to play with robots
 - 🎪 Co-ran **jacobsHack!22**, one of Central Europe's biggest hackathons — turns out herding 5 departments is harder than herding robots
-- 📸 Off-duty: travel & photography — visual odometry, the analog way
 
 ### 📊 The obligatory stats
 
