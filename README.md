@@ -2,11 +2,11 @@
 <h1 align="center">Hey, I'm Mourad Ouazghire 👋</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3000&pause=1000&center=true&vCenter=true&width=500&color=007BFF&lines=Teaching+robots+where+they+are;Teaching+LLMs+what+they+know;Turning+point+clouds+into+papers;Closing+loops+since+2023" alt="Typing intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3000&pause=1000&center=true&vCenter=true&width=500&color=007BFF&lines=Teaching+robots+where+they+are;Teaching+LLMs+what+they+know;Computer,+show+em+that+average+looking+CV;" alt="Typing intro" />
 </p>
 
 <p align="center">
-  <b>AI/ML @ TU Darmstadt · Robotics & SLAM · GenAI systems that actually ship</b>
+  <b>AI/ML @ TU Darmstadt · Robotics & AI · GenAI systems that actually ship</b>
 </p>
 
 <div align="center">
