@@ -110,7 +110,7 @@ graph LR
 
 - 🗣️ **Languages:** English, French & Arabic (fluent) · German (C1) · Python (native) · C++ (it's complicated)
 - 🏆 **2× DAAD RISE Worldwide Scholar** (2023 & 2024) — Germany kept sending me abroad to play with robots
-- 🎪 Co-ran **jacobsHack!22**, one of Central Europe's biggest hackathons — turns out herding 5 departments is harder than herding robots
+- 🎪 Co-ran **jacobsHack!22**, one of Central Europe's biggest hackathons managing 5 departments
 
 ### 📊 The obligatory stats
 
