@@ -135,7 +135,7 @@ def frame(w, h):
 
 
 def header(w, accent, tag, status):
-    cw = len(status) * 7.8 + 36
+    cw = len(status) * 8.2 + 40
     x = w - 24 - cw
     return (
         f'<text x="24" y="36" class="b" font-size="13" letter-spacing="2" fill="{accent}">{esc(tag)}</text>'
@@ -718,18 +718,17 @@ def hero():
     # name with an RGB split that glitches every few seconds
     name = "".join(f'<text x="44" y="{y}" class="b" font-size="78" letter-spacing="2">{t}</text>'
                    for t, y in (("MOURAD", 160), ("OUAZGHIRE", 238)))
-    out.append(f'<text x="48" y="86" font-size="16" fill="{DIM}">// hello world, this is</text>'
-               f'<g class="gc" fill="{CYAN}" opacity=".9">{name}</g>'
+    out.append(f'<g class="gc" fill="{CYAN}" opacity=".9">{name}</g>'
                f'<g class="gm" fill="{MAGENTA}" opacity=".9">{name}</g>'
                f'<g fill="{INK}">{name}</g>')
     out.append(f'<text x="48" y="282" font-size="19" fill="#c9d1d9">'
-               f'I build robots and AI agents that do things nobody asked for.</text>')
+               f'I build robots and AI agents.</text>')
 
     # typing prompt
-    phrases = ["moving a humanoid with brain waves",
-               "letting AI agents pay each other in bitcoin",
-               "teaching a robot dog to follow my finger",
-               "giving a robot dog a tail. for THE SHOW."]
+    phrases = ["EEG to humanoid control",
+               "agent-to-agent payments over Lightning",
+               "gesture control for quadrupeds",
+               "LiDAR odometry and loop closure"]
     T, cw, x0 = 16, 11.4, 86
     out.append(f'<rect x="44" y="300" width="680" height="42" rx="10" fill="{PANEL}" stroke="#1f2833"/>'
                f'<text x="62" y="328" class="b" font-size="19" fill="{GREEN}">▸</text>')
@@ -747,8 +746,7 @@ def hero():
                    f'<rect x="{x0 + 11}" y="302" width="660" height="38" fill="{PANEL}"/></g></g></g>')
 
     out.append(f'<text x="48" y="382" font-size="14" fill="#c9d1d9"><tspan class="b" fill="{AMBER}">'
-               f'ROBOTS BOSSED AROUND ▸</tspan> Unitree G1 / Go2 / Go1 / R1 · Franka Panda · BlueROV2 · '
-               f'MIA Hand · 1 drone</text>')
+               f'PLATFORMS ▸</tspan> Unitree G1 / Go2 / Go1 / R1 · Franka Panda · BlueROV2 · MIA Hand · drone</text>')
 
     # LiDAR scope: points light up as the beam sweeps past
     cx, cy, R, sweep = 912, 212, 136, 4
@@ -798,7 +796,7 @@ def hero():
     defs = (GRID_DEF + f'<clipPath id="round"><rect width="{w}" height="{h}" rx="18"/></clipPath>'
             f'<clipPath id="pill"><rect x="45" y="301" width="678" height="40" rx="9"/></clipPath>')
     body = f'<g clip-path="url(#round)">{"".join(out)}</g>'
-    write("hero", svg(w, h, "Mourad Ouazghire: I build robots and AI agents that do things nobody asked for.",
+    write("hero", svg(w, h, "Mourad Ouazghire: I build robots and AI agents.",
                       body, css, defs))
 
 
@@ -843,50 +841,47 @@ def main():
     illus, defs = illus_telekinex()
     feature_card(
         "exp-telekinex", MAGENTA, "EXP-01 · HACKATHON · 18 H", "MIND-CONTROLLED",
-        "Moved a humanoid robot with my brain.",
-        "Non-invasive EEG → a 12.6K-param EEGNet → a Unitree G1 humanoid in MuJoCo, doing "
-        "pick-and-place on a factory floor. Voice and WASD as backup, because brains get tired.",
+        "EEG to humanoid control.",
+        "Non-invasive EEG, decoded by a 12.6K-parameter EEGNet, drives a Unitree G1 through "
+        "pick-and-place in MuJoCo. Voice and manual control as fallback.",
         "PyTorch · ONNX · MuJoCo · FastAPI · WebSockets", illus, defs)
 
     illus, defs = illus_agora()
     feature_card(
         "exp-agora", AMBER, "EXP-02 · HACK-NATION · WITH GEOSHUA", "240 SAT / CALL",
-        "AI agents that hire & pay each other in bitcoin.",
-        "Agent hits a paywall → gets a Lightning invoice → pays → gets the goods. No accounts, "
-        "no API keys, no humans. Ships an MCP server so Claude can go shopping with a budget "
-        "and a kill-switch.",
+        "Agents that pay agents.",
+        "A marketplace where AI agents find, pay for and use each other's services over "
+        "Lightning (L402). No accounts, no API keys. Includes an MCP server with a budget and "
+        "a kill-switch.",
         "L402 · Lightning (NWC) · Ed25519 · Next.js · MCP", illus, defs)
 
     cards = [
         ("exp-telephone", CYAN, "EXP-03 · DIMOS", "ON AIR", "Robot Telephone",
-         "Two robots patrol and gossip over a live radio feed while I read their chat bubbles.",
+         "Two simulated robots patrol and talk over a shared radio feed.",
          "DimOS · MuJoCo · Claude Haiku", illus_telephone),
         ("exp-point", GREEN, "EXP-04 · UNITREE GO2", "GOOD BOY", "Go Where I Point",
-         "Point at a spot, the robot dog walks there. Also taught it football, a key-finder "
-         "patrol and VR teleop moves.",
+         "A Unitree Go2 walks to where you point. Also: key-finder patrol, football, VR "
+         "teleoperation.",
          "Unitree Go2 · DimOS · Quest teleop", illus_point),
         ("exp-escape", AMBER, "EXP-05 · UNITREE G1", "ESCAPING…", "Humanoid Escape Room",
-         "Locked a G1 humanoid in a maze with nothing but a depth camera, plus a web dashboard "
-         "to watch it try.",
+         "A Unitree G1 navigates a MuJoCo maze from depth alone, monitored from a web dashboard.",
          "Unitree G1 · MuJoCo · depth-based navigation", illus_escape),
-        ("exp-animator", MAGENTA, "EXP-06 · ANIMATOR", "THE SHOW", "Robot Dog, Disney Edition",
-         "Gave a robot dog eyes, ears, a tail and a foot-synced walk. The commit message just "
-         "says 'THE SHOW'.",
+        ("exp-animator", MAGENTA, "EXP-06 · ANIMATOR", "THE SHOW", "Robot Dog Animator",
+         "Procedural animation for a robot dog: eyes, ears, tail and a foot-synced gait.",
          "MuJoCo · procedural animation · gait sync", illus_animator),
-        ("exp-r1", ORANGE, "EXP-07 · UNITREE R1", "TALKS BACK", "A Humanoid That Talks Back",
-         "Wired an LLM agent into a Unitree R1: it answers through its own onboard speaker and "
-         "gestures with its arms.",
+        ("exp-r1", ORANGE, "EXP-07 · UNITREE R1", "TALKS BACK", "Humanoid Voice Agent",
+         "An LLM agent on a Unitree R1. It speaks through the onboard speaker and gestures with "
+         "its arms.",
          "Unitree R1 · claude-haiku-4-5 · speech", illus_r1),
-        ("exp-drone", CYAN, "EXP-08 · REINFORCEMENT LEARNING", "REWARD ↑", "Drone vs. Fake City",
-         "Built a MuJoCo city plus a Gymnasium RL pipeline to teach a drone to fly through it.",
+        ("exp-drone", CYAN, "EXP-08 · REINFORCEMENT LEARNING", "REWARD ↑", "Drone RL in a Simulated City",
+         "A MuJoCo city and a Gymnasium pipeline for training a drone with reinforcement learning.",
          "MuJoCo · Gymnasium · RL", illus_drone),
         ("exp-lidar", GREEN, "EXP-09 · PUBLISHED", "LOOP CLOSED", "LiDAR in a Botanic Garden",
-         "Benchmarked LiDAR odometry and loop closure across an Australian botanic garden → "
-         "main-author paper at ACRA 2024.",
+         "LiDAR odometry and loop closure, benchmarked at the Australian Botanic Garden, Mount "
+         "Annan. ACRA 2024, main author.",
          "ROS · LIO-SAM · FAST-LIO · COIN-LIO", illus_lidar),
-        ("exp-bluerov", BLUE, "EXP-10 · UNDERWATER", "SUBMERGED", "Kalman Filter, but Underwater",
-         "Kept a BlueROV2 from getting lost underwater: Doppler velocity log + Kalman filter → "
-         "ROS odometry.",
+        ("exp-bluerov", BLUE, "EXP-10 · UNDERWATER", "SUBMERGED", "Underwater Navigation",
+         "Kalman filter over Doppler velocity log data for a BlueROV2, published as ROS odometry.",
          "ROS Noetic · DVL · FilterPy", illus_bluerov),
     ]
     for slug, accent, tag, status, title, desc, foot, draw in cards:
